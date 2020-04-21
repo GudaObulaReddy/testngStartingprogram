@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="TestPlan1">
+   <groups>
+   <run>
+   <include name="Regression"></include>
+   <include name="sanity"></include>
+   </run>
+   </groups>
+   <classes>
+   <class name="Amazon.Page4">
+   <methods>
+   <include name="cardDetails1"></include>
+   </methods>
+   </class>
+   </classes>
+  
+  </test> <!-- Test -->
+   <test thread-count="5" name="TestPlan2">
+   
+   <classes>
+   <class name="Test.Demo"></class>
+   <class name="Test.Page2">
+   <methods>
+   <include name="net.*"></include>
+   </methods>
+   </class>
+   
+   <class name="Test.Page3">
+   <methods>
+   <exclude name="cart.*"></exclude>
+   </methods>
+   </class>
+   </classes>
+  
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
